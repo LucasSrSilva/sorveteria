@@ -1,0 +1,40 @@
+.menu-sabores {
+    position: fixed;
+    height: 70%;
+    width: 60%;
+    z-index: 100;
+    display: none;
+    flex-direction: column;
+    background-color: var(--light-pink);
+}
+.menu-titulo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.menu-fechar {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: red;
+    height: 70%;
+    font-size: 1.5rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+.menu-header {
+    background-color: var(--pink);
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-pagamento {
+    position: fixed;
+    height: 70%;
+    width: 60%;
+    z-index: 100;
+    display: none;
+    flex-direction: column;
+    background-color: var(--light-yellow);
+}

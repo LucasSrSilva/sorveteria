@@ -1,0 +1,12 @@
+header {
+    background: rgb(255, 140, 158);
+    background: linear-gradient(0deg, rgba(255, 140, 158, 1) 20%, rgba(255, 78, 136, 1) 50%);
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.operador {
+    font-size: 2rem;
+}
