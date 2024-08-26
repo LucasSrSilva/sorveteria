@@ -22,23 +22,25 @@
         <h2 class="header__titulo">SnowBall Sorveteria</h2>
     </header>
     <nav>
-        <input type="text" id="codigoOperador" placeholder="Código do operador">
-        <button id="iniciarOperacao">Iniciar operação</button>
-        <button>Sair</button>
+        <div class="nav__form">
+            <input type="text" id="codigoOperador" placeholder="Código do operador">
+            <button id="iniciarOperacao">Iniciar operação</button>
+        </div>
+        <button class="logout">Sair</button>
     </nav>
-    <main>
+    <main class="gerencia__main">
         <section id="vendas-dia">
-            <h3>Vendas do Dia</h3>
+            <h2>Vendas do Dia</h3>
             <ul id="lista-vendas-dia"></ul>
         </section>
     
         <section id="vendas-mes">
-            <h3>Vendas Mensais</h3>
+            <h2>Vendas/Dia</h3>
             <ul id="lista-vendas-mes"></ul>
         </section>
     
         <section id="vendas-operador">
-            <h3>Total de Vendas por Operador no Mês</h3>
+            <h2>Total de Vendas por Operador no Mês</h3>
             <ul id="lista-vendas-operador"></ul>
         </section>
     </main>

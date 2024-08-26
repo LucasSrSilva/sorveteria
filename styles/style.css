@@ -5,6 +5,8 @@
 @import url(footer.css);
 @import url(menu.css);
 @import url(login.css);
+@import url(nav.css);
+@import url(gerencia.css);
 
 :root {
     --light-pink: #FF8C9E;
@@ -15,6 +17,8 @@
     --white: #FFFFFF;
     --black: #000000;
 }
+
+*{max-width: 100vw;}
 
 body {
     height: 100vh;
@@ -30,6 +34,7 @@ body {
     grid-template-columns: auto 1fr;
     gap: 0;
     font-family: "roboto", sans-serif;
+    max-width: 100vw;
 }
 header {grid-area: header;}
 nav {grid-area: nav;}

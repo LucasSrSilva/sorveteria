@@ -1,0 +1,27 @@
+nav {
+    background-color: var(--light-pink);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
+
+nav>.nav__form{
+    padding-left: 2rem;
+}
+
+nav>.nav__form>button{
+    background-color: var(--light-green-blue);
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+nav>.logout {
+    margin-right: 2rem;
+    background-color: red;
+    font-weight: 700;
+    border: 1px solid black;
+    text-align: center;
+    padding: 0.2rem 1rem;
+    cursor: pointer;
+}

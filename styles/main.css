@@ -1,6 +1,7 @@
 main {
     height: 90vh;
     background-image: url(../assets/fundo.png);
+    background-size: contain;
     display: flex;
     align-items: center;
     justify-content: center;
