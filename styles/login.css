@@ -1,0 +1,40 @@
+.login {
+    background-color: var(--pink);
+    width: 300px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    border: 1px solid black;
+}
+
+.login>h2{
+    margin-bottom: 4rem;
+    font-size: 1.5rem;
+}
+
+.login>form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login>form>input, .login>form>button {
+    text-align: center;
+    border: 1px solid black;
+    height: 2rem;
+    width: 90%;
+    margin: 1rem;
+}
+
+.login>form>input::placeholder{
+    color: rgba(0, 0, 0, 0.688);
+}
+
+.login__submit {
+    background-color: var(--light-green-blue);
+    cursor: pointer;
+}

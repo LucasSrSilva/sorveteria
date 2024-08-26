@@ -21,20 +21,31 @@
     <header>
         <h2 class="header__titulo">SnowBall Sorveteria</h2>
     </header>
+    <nav>
+        <input type="text" id="codigoOperador" placeholder="Código do operador">
+        <button id="iniciarOperacao">Iniciar operação</button>
+        <button>Sair</button>
+    </nav>
     <main>
-        <section class="login">
-            <h2>Login de Gerência</h2>
-            <form id="loginForm" action="gerencia.html">
-                <label for="codigo"></label>
-                <input type="password" id="codigo" name="codigo" required placeholder="Digite o código de gerencia">
-                <button class="login__submit" type="submit">Enviar</button>
-            </form>
+        <section id="vendas-dia">
+            <h3>Vendas do Dia</h3>
+            <ul id="lista-vendas-dia"></ul>
+        </section>
+    
+        <section id="vendas-mes">
+            <h3>Vendas Mensais</h3>
+            <ul id="lista-vendas-mes"></ul>
+        </section>
+    
+        <section id="vendas-operador">
+            <h3>Total de Vendas por Operador no Mês</h3>
+            <ul id="lista-vendas-operador"></ul>
         </section>
     </main>
     <footer>
         <p>Feito com carinho!</p>
     </footer>
-    <script src="js/login.js"></script>
+    <script src="js/gerencia.js"></script>
 </body>
 
 </html>

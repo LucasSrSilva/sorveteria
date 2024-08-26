@@ -1,0 +1,6 @@
+{
+    "vendas": [
+        { "horario": "09:00", "itens": "Casquinha", "total": 5 },
+        { "horario": "10:00", "itens": "Sundae", "total": 7 }
+    ]
+}

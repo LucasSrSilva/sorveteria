@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="caixa para sorveteria">
+    <meta name="keywords" content="sorveteria, caixa, pagamento">
+    <meta name="author" content="lucas souza ribeiro">
+    <title>Caixa Sorveteria</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="assets/icon.ico" type="imagem/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h2 class="operador"><span>123321</span> - <span>jorge</span></h2>
+    </header>
+    <aside>
+        <section class="carrinho">
+            <table>
+                <tr class="titulo-produto">
+                    <th>nome</th>
+                    <th>quant.</th>
+                    <th>valor</th>
+                </tr>
+            </table>
+        </section>
+        <section class="valor">
+            <article>
+                <p>Total da compra</p>
+                <span class="preco-total">R$0</span>
+            </article>
+            <button class="pagar">Pagar</button>
+        </section>
+    </aside>
+    <main>
+        <section class="opcoes">
+            <button class="opcao opcao-produto">Casquinha</button>
+            <button class="opcao opcao-produto">Sundae</button>
+            <button class="opcao opcao-produto">MilkShake</button>
+        </section>
+
+        <menu class="menu-sabores" id="menu-sabores">
+            <section class="menu-header">
+                <h2 class="menu-titulo" id="produto-titulo"></h2>
+                <button class="menu-fechar">Cancelar</button>
+            </section>
+            <section class="opcoes">
+                <button class="opcao opcao-sabor">chocolate</button>
+                <button class="opcao opcao-sabor">creme</button>
+                <button class="opcao opcao-sabor">Morango</button>
+            </section>
+        </menu>
+        <menu class="menu-pagamento" id="menu-pagamento">
+            <section class="menu-header">
+                <h2 class="menu-titulo">Pagamento</h2>
+                <button class="menu-fechar">Cancelar</button>
+            </section>
+            <section class="opcoes">
+                <button class="opcao opcao-pagar debito">Débito</button>
+                <button class="opcao opcao-pagar credito">Crédito</button>
+                <button class="opcao opcao-pagar dinheiro">Dinheiro</button>
+            </section>
+        </menu>
+    </main>
+    <footer>
+        <p>Feito com carinho!</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/pagamento.js"></script>
+</body>
+
+</html>
