@@ -7,13 +7,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const carrinhoContainer = document.querySelector(".carrinho");
     const pagar = document.querySelector(".pagar");
     const opcoesSabores = document.querySelector(".opcoes__sabores");
+    const btnPagar = document.querySelectorAll(".opcao-pagar");
+    let precoTotal = 0;
     let opcaoSabor;
     let produtoEscolhido;
     let produtoEscolhidoValor = 0;
     let saborEscolhido;
-    let precoTotal = 0;
     let sabores;
-
+    
     async function fetchDados() {
         try {
             const response = await fetch('docs/dados.json');
@@ -124,6 +125,10 @@ document.addEventListener("DOMContentLoaded", function () {
         pagar.addEventListener("click", function () {
             menuPagamento.style.display = "flex";
         });
+        btnPagar.forEach(botao => {
+            botao.addEventListener("click", function () {
+                precoTotal = 0
+            })})
     }
 
     fetchDados();
