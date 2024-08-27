@@ -13,20 +13,20 @@
     },
     "vendas": {
       "vendas": [
-        { "horario": "09:00", "itens": "Casquinha de chocolate", "total": 5 },
-        { "horario": "10:00", "itens": "Sundae de morango", "total": 7 }
+        { "horario": "09:00", "itens": "Casquinha de chocolate", "total": 0 },
+        { "horario": "10:00", "itens": "Sundae de morango", "total": 0 }
       ]
     },
     "vendasDiarias": {
       "vendasDiarias": [
-        { "data": "2024-08-25", "totalVendas": 7 },
-        { "data": "2024-08-24", "totalVendas": 5 }
+        { "data": "2024-08-25", "totalVendas": 0 },
+        { "data": "2024-08-24", "totalVendas": 0 }
       ]
     },
     "vendasOperador": {
       "vendasOperadores": [
-        { "operador": "Dolly Almeida", "totalVendas": 200 },
-        { "operador": "Carlos Silva", "totalVendas": 150 }
+        { "operador": "Dolly Almeida", "totalVendas": 0 },
+        { "operador": "Carlos Silva", "totalVendas": 0 }
       ]
     }
   }

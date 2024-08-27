@@ -1,11 +1,14 @@
 .menu-sabores {
     position: fixed;
-    height: 80%;
+    height: 85%;
     width: 65%;
     z-index: 100;
     display: none;
     flex-direction: column;
     background-color: var(--light-pink);
+    max-height: 90%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 .menu-titulo {
     font-size: 1.5rem;

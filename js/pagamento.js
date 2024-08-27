@@ -1,19 +1,27 @@
-import { vendasOperador, vendasDiarias, vendas } from "./dados.js";
-
 document.addEventListener("DOMContentLoaded", function () {
     const carrinho = document.querySelector(".carrinho tbody");
     const btnPagar = document.querySelectorAll(".opcao-pagar");
+    const dadosKey = 'dados'; // Chave para armazenar os dados no localStorage
 
+    // Função para calcular o troco
     function calcularTroco(totalCompra, valorPago) {
         return valorPago - totalCompra;
     }
 
+    // Função para zerar o carrinho
     function zerarCarrinho() {
         document.querySelector(".preco-total").innerHTML = "0";
         carrinho.innerHTML = '';
     }
 
+    // Função para registrar itens no carrinho e atualizar vendas
     function registrarItensCarrinho() {
+        const dados = JSON.parse(localStorage.getItem(dadosKey)) || {
+            vendas: { vendas: [] },
+            vendasDiarias: { vendasDiarias: [] },
+            vendasOperador: { vendasOperadores: [] }
+        };
+
         const carrinhoItens = [];
         const produtos = document.querySelectorAll(".produto");
         const precoTotal = document.querySelector(".preco-total");
@@ -28,30 +36,36 @@ document.addEventListener("DOMContentLoaded", function () {
         const dataAtual = new Date().toISOString().slice(0, 10); // Formato YYYY-MM-DD
         const horaAtual = new Date().toLocaleTimeString();
     
-        vendas.vendas.push({ horario: horaAtual, itens: carrinhoItens, total: precoTotal.textContent });
+        dados.vendas.vendas.push({ horario: horaAtual, itens: carrinhoItens, total: precoTotal.textContent });
     
-        const vendaDiaria = vendasDiarias.vendasDiarias.find(venda => venda.data === dataAtual);
+        const vendaDiaria = dados.vendasDiarias.vendasDiarias.find(venda => venda.data === dataAtual);
         if (vendaDiaria) {
             vendaDiaria.totalVendas += 1;
         } else {
-            vendasDiarias.vendasDiarias.push({ data: dataAtual, totalVendas: 1 });
+            dados.vendasDiarias.vendasDiarias.push({ data: dataAtual, totalVendas: 1 });
         }
 
-        atualizarVendasOperador();
+        atualizarVendasOperador(dados);
+
+        localStorage.setItem(dadosKey, JSON.stringify(dados));
     }
 
-    function atualizarVendasOperador() {
+    // Função para atualizar vendas do operador
+    function atualizarVendasOperador(dados) {
         const operadorAtual = localStorage.getItem('operadorAtual');
-        const vendaOperador = vendasOperador.vendasOperadores.find(venda => venda.operador == operadorAtual)
-        vendaOperador.totalVendas += 1
-        localStorage.setItem('vendasOperadores', JSON.stringify(vendaOperador));
-        console.log(vendaOperador)
+        const vendaOperador = dados.vendasOperador.vendasOperadores.find(venda => venda.operador === operadorAtual);
         
+        if (vendaOperador) {
+            vendaOperador.totalVendas += 1;
+        } else {
+            dados.vendasOperador.vendasOperadores.push({ operador: operadorAtual, totalVendas: 1 });
+        }
     }
 
-
+    // Evento para processamento de pagamento
     btnPagar.forEach(botao => {
         botao.addEventListener("click", function () {
+            const menuPagamento = document.getElementById("menu-pagamento");
             const totalCompra = parseFloat(document.querySelector(".preco-total").textContent.replace("R$", ""));
             if (botao.classList.contains("dinheiro")) {
                 const valorPago = parseFloat(prompt("Digite o valor pago:"));
@@ -63,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
             // Registrar a venda e zerar o carrinho
+            menuPagamento.style.display = "none";
             registrarItensCarrinho();
             zerarCarrinho();
         });

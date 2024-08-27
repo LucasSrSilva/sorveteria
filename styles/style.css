@@ -38,6 +38,6 @@ body {
 }
 header {grid-area: header;}
 nav {grid-area: nav;}
-aside {grid-area: aside;}
-main {grid-area: main;}
+aside {grid-area: aside; height: 80vh;}
+main {grid-area: main; height: 80vh;}
 footer {grid-area: footer;}

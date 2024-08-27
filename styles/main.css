@@ -1,5 +1,4 @@
 main {
-    height: 90vh;
     background-image: url(../assets/fundo.png);
     background-size: contain;
     display: flex;
@@ -26,4 +25,7 @@ main {
     cursor: pointer;
     font-size: 2rem;
     margin: 1rem;
+}
+.opcao:hover {
+    text-decoration: underline;
 }
