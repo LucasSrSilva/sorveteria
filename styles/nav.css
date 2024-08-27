@@ -30,3 +30,12 @@ nav>div>.logout {
     background-color: red;
 }
 
+.estoque__nav{
+    justify-content: center;
+}
+.estoque__nav>div>button{
+    margin: 0;
+}
+
+
+
