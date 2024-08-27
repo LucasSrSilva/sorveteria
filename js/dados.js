@@ -14,8 +14,8 @@ export const gerencia = {
 
 export const vendas = {
     "vendas": [
-        { "horario": "09:00", "itens": "Casquinha", "total": 5 },
-        { "horario": "10:00", "itens": "Sundae", "total": 7 }
+        { "horario": "09:00", "itens": "Casquinha de chocolate", "total": 5 },
+        { "horario": "10:00", "itens": "Sundae de morango", "total": 7 }
     ]
 }
 

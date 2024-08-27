@@ -16,12 +16,17 @@ nav>.nav__form>button{
     cursor: pointer;
 }
 
-nav>.logout {
+nav>div>button {
     margin-right: 2rem;
-    background-color: red;
+    background-color: var(--light-green-blue);
     font-weight: 700;
     border: 1px solid black;
     text-align: center;
     padding: 0.2rem 1rem;
     cursor: pointer;
 }
+
+nav>div>.logout {
+    background-color: red;
+}
+
