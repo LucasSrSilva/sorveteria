@@ -28,7 +28,7 @@ export const vendasDiarias = {
 
 export const vendasOperador = {
     "vendasOperadores": [
-        { "mes": "Junho", "operador": "Dolly Almeida", "totalVendas": 200 },
-        { "mes": "Junho", "operador": "Carlos Silva", "totalVendas": 150 }
+        { "operador": "Dolly Almeida", "totalVendas": 200 },
+        { "operador": "Carlos Silva", "totalVendas": 150 }
     ]
 }

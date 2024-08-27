@@ -1,0 +1,32 @@
+{
+    "operacao": {
+      "operadores": [
+        { "nome": "Dolly Almeida", "codigo": "001" },
+        { "nome": "Flecha", "codigo": "002" }
+      ]
+    },
+    "gerencia": {
+      "gerentes": {
+        "nome": "Alejandro",
+        "codigo": "5550123"
+      }
+    },
+    "vendas": {
+      "vendas": [
+        { "horario": "09:00", "itens": "Casquinha de chocolate", "total": 5 },
+        { "horario": "10:00", "itens": "Sundae de morango", "total": 7 }
+      ]
+    },
+    "vendasDiarias": {
+      "vendasDiarias": [
+        { "data": "2024-08-25", "totalVendas": 7 },
+        { "data": "2024-08-24", "totalVendas": 5 }
+      ]
+    },
+    "vendasOperador": {
+      "vendasOperadores": [
+        { "operador": "Dolly Almeida", "totalVendas": 200 },
+        { "operador": "Carlos Silva", "totalVendas": 150 }
+      ]
+    }
+  }

@@ -11,10 +11,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.getElementById('iniciarOperacao').addEventListener('click', function () {
-        const codigoOperador = document.getElementById("codigoOperador").value;
 
+        const codigoOperador = document.getElementById("codigoOperador").value;
         const operador = operacao.operadores.find(op => op.codigo === codigoOperador)
+
         if (operador) {
+            localStorage.setItem("operadorAtual", operador.nome);
             window.location.href = 'caixa.html';
         } else {
             alert('Código de operador inválido.');
@@ -37,10 +39,12 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     
 
+    const vendasOperadores = JSON.parse(localStorage.getItem('vendasOperadores'));
+    console.log(vendasOperadores);
     const listaVendasOperador = document.getElementById("lista-vendas-operador");
     vendasOperador.vendasOperadores.forEach( venda => {
         const item = document.createElement("li");
-        item.textContent = `${venda.mes}: ${venda.operador} - ${venda.totalVendas} vendas`;
+        item.textContent = `${venda.operador} - ${venda.totalVendas} vendas`;
         listaVendasOperador.appendChild(item);
 
     })

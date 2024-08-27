@@ -1,3 +1,5 @@
+import { operacao } from "./dados.js";
+
 document.addEventListener("DOMContentLoaded", function () {
     const menuSabores = document.getElementById("menu-sabores");
     const menuPagamento = document.getElementById("menu-pagamento");
@@ -14,9 +16,16 @@ document.addEventListener("DOMContentLoaded", function () {
     let precoTotal = 0;
     let sabores;
 
-    // <button class="opcao opcao-sabor">chocolate</button>
-    // <button class="opcao opcao-sabor">creme</button>
-    // <button class="opcao opcao-sabor">Morango</button>
+    document.querySelector(".logout").addEventListener("click", function() {
+        window.location.href = "gerencia.html"
+    })
+    
+    const nomeOperador = localStorage.getItem('operadorAtual');
+    if (nomeOperador) {
+        document.getElementById('nomeOperador').textContent = nomeOperador;
+    } else {
+        alert('Nenhum operador encontrado!');
+    }
 
     menuFechar.forEach(botao => {
         botao.addEventListener('click', function () {
@@ -79,9 +88,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         `
                     carrinho.insertAdjacentHTML("beforeend", novoProduto);
                     carrinhoContainer.scrollTop = carrinhoContainer.scrollHeight;
-        
+
                     const valorTotal = document.querySelector(".preco-total");
-                    valorTotal.textContent = `R$${precoTotal}`
+                    valorTotal.textContent = `${precoTotal}`
                 })
             })
         })

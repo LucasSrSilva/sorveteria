@@ -23,9 +23,11 @@
     </header>
     <nav>
         <div class="nav__form">
-            <p>Operador</p>
+            <p>Operador: <span id="nomeOperador"></span></p>
         </div>
-        <button class="logout">Sair</button>
+        <div>
+            <button class="logout">Sair</button>
+        </div>
     </nav>
     <aside>
         <section class="carrinho">
@@ -40,7 +42,7 @@
         <section class="valor">
             <article>
                 <p>Total da compra</p>
-                <span class="preco-total">R$0</span>
+                <p>R$<span class="preco-total">0</span></p>
             </article>
             <button class="pagar">Pagar</button>
         </section>
@@ -76,8 +78,8 @@
         <p>Feito com carinho!</p>
     </footer>
 
-    <script src="js/script.js"></script>
-    <script src="js/pagamento.js"></script>
+    <script type="module" src="js/caixa.js"></script>
+    <script type="module" src="js/pagamento.js"></script>
 </body>
 
 </html>
