@@ -2,7 +2,7 @@
     "operacao": {
       "operadores": [
         { "nome": "Dolly Almeida", "codigo": "001" },
-        { "nome": "Carlos Silva", "codigo": "002" }
+        { "nome": "Britney", "codigo": "002" }
       ]
     },
     "gerencia": {
@@ -26,7 +26,7 @@
     "vendasOperador": {
       "vendasOperadores": [
         { "operador": "Dolly Almeida", "totalVendas": 0 },
-        { "operador": "Carlos Silva", "totalVendas": 0 }
+        { "operador": "Britney", "totalVendas": 0 }
       ]
     }
   }
